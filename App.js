@@ -1,11 +1,14 @@
 import React from 'react'
 import { StatusBar, View } from 'react-native'
+
 import { useFonts,
   Montserrat_400Regular,
  Montserrat_400Regular_Italic,
  Montserrat_700Bold
 } from '@expo-google-fonts/montserrat'
+
 import Cesta from './src/screens/Cesta'
+import mock from './src/mocks/cesta'
 
 export default function App() {
   const [loadedFont] = useFonts({
@@ -18,7 +21,7 @@ export default function App() {
   return (
     <View>
       <StatusBar />
-      <Cesta />
+      <Cesta {...mock} />
     </View>
   );
 }
